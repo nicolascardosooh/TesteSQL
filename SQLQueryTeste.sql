@@ -8,8 +8,7 @@ select * from vendedores
 update vendedores set inativo = 1 where id in (1,2,4)
 update vendedores set inativo = 0 where id in (3,5)
 
-
--- 2. Funcionários com Salário Acima da Média
+-- 2. FuncionÃ¡rios com SalÃ¡rio Acima da MÃ©dia
 SELECT id, nome, salario
 FROM vendedores
 WHERE salario > (SELECT AVG(salario) FROM vendedores)
@@ -25,7 +24,7 @@ ORDER BY total DESC;
 select * from pedido
 select * from clientes
 
--- 4. Situação por Pedido
+-- 4. SituaÃ§Ã£o por Pedido
 SELECT id_pedido, valor_total, DATA_EMISSAO,
        CASE 
          WHEN data_cancelamento IS NOT NULL THEN 'CANCELADO'
@@ -43,7 +42,3 @@ FROM ITENS_PEDIDO IP
 JOIN PEDIDO P ON IP.ID_PEDIDO = P.ID_PEDIDO
 GROUP BY IP.ID_PRODUTO
 ORDER BY quantidade_vendida DESC, total_vendido DESC;
-
-
-SELECT * FROM ITENS_PEDIDO
-SELECT * FROM 
