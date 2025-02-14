@@ -42,3 +42,8 @@ FROM ITENS_PEDIDO IP
 JOIN PEDIDO P ON IP.ID_PEDIDO = P.ID_PEDIDO
 GROUP BY IP.ID_PRODUTO
 ORDER BY quantidade_vendida DESC, total_vendido DESC;
+
+
+//Observação: 
+Abri meu SSMS (Gerenciador do SQL SERVER), e criei as tabelas, utilizei sql server express 2017.
+Quaisquer duvidas tenho salvo em um documento o print do resultado de cada consulta realizada.
